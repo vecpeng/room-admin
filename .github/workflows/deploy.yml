@@ -43,4 +43,4 @@ jobs:
             # 用户名
             REMOTE_USER: ${{ secrets.REMOTE_USER }} 
             # 目标目录
-            TARGET: "~/code/room-admin" 
+            TARGET: "/home/ubuntu/code/room-admin" 
