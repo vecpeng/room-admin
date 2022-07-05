@@ -20,11 +20,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16
+          cache: 'pnpm'
       # 运行命令，npm install && npm run build
       - name: npm install and build
         run: |
           npm install -g pnpm
-          pnpm install --config.strict-peer-dependencies=false
+          pnpm install --config.strict-peer-dependencies=false --frozen-lockfile
           npm run build
         env:
           CI: true
